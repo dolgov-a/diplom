@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="StyleSheet.css">
+    <script src="/JavaScript.js"></script>
+    <title>Главная страница</title>
+    <style>
+        header {
+            color: black;
+            padding: 20px;
+            text-align: center;
+            font-family:'Nord-Star Deco';
+        }
+
+        /* стили для панели обратной связи */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+            input[type="submit"] {
+                background-color: #333;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <!-- Шапка страницы -->
+    <header>
+        
+        <img src="img/эмблема2.png" alt="Картинка в шапке страницы" />
+        <button class="burger-menu-btn">&#9776;</button>
+    </header>
+
+    <!-- Ссылки меню -->
+    <nav>
+        <a href="Index.html">ГЛАВНАЯ</a>
+        <a href="Portfolio.html">ПОРТФОЛИО</a>
+        <a href="Uslugi.html">УСЛУГИ</a>
+        <a href="Kontact.html">КОНТАКТЫ</a>
+    </nav>
+    <header>
+        <h1>ОБРАТНАЯ СВЯЗЬ</h1>
+        <p>
+            Связаться со мной просто!<br>
+            Меня зовут Олег, я кузнец.<br>
+            Напишите мне удобным для вас способом.<br>
+            Люблю удивлять и радовать людей своими работами!
+        </p>
+        <p>Написать мне:</p>
+        <a href="whatsapp://send?phone=+79180158291">
+            <img src="icon/whatsapp.png" alt="WhatsApp icon">
+        </a>
+        <a href="https://vk.com/id460388775">
+            <img src="icon/vk.png" alt="VK icon">
+        </a>
+
+    </header>
+        <div class="container">
+            
+            <form>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+        <div class="parallax"></div>
+        <footer>
+            <p>Все права защищены ©NIKOLA</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+﻿/* Стили для Backgraud images */
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Стили для контента по середине страницы */
+.content {
+    width: 80%;
+    max-width: 12px;
+    margin: 0 auto;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    .content {
+        width: 90%;
+    }
+}
+/* Стили для шапки */
+header {
+    background-color: white;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    /* Стили для изображения в шапке */
+    header img {
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+
+/* Стили для ссылок меню */
+nav a {
+    color: black;
+    font-size: 20px;
+    font-weight: lighter;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Nord-Star Deco'
+}
+
+    nav a:hover {
+        color: gray;
+    }
+
+/* Стили для контейнера ссылок меню */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/* Стили для контента страницы */
+main {
+    padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .parallax {
+        height: 300px; /* Уменьшить высоту блока для мобильных устройств */
+    }
+}
+
+.parallax {
+    height: 350px; /* Установите желаемую высоту для блока параллакса */
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Зафиксировать фоновое изображение */
+}
+
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Nord-Star Deco';
+}
+
+.burger-menu-btn {
+    display: none; /* по умолчанию скрываем кнопку на больших экранах */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* стили для меню при раскрытом бургер меню */
+@media screen and (max-width: 600px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        text-align: center;
+    }
+
+        nav a {
+            display: block;
+            padding: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+    .burger-menu-btn {
+        display: block; /* показываем кнопку на маленьких экранах */
+    }
+}

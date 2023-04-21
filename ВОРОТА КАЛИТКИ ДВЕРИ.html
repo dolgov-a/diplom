@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="StyleSheet.css">
+    <script src="/JavaScript.js"></script>
+    <title>Главная страница</title>
+    <style>
+
+        .label {
+            text-align: center; /* выравнивание по центру */
+            font-family: 'Nord-Star Deco'; /* установка шрифта */
+            font-size: 18px;
+            margin-top: 200px; /* отступ сверху */
+            margin-bottom: 40px; /* отступ снизу */
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px auto;
+        }
+
+            .gallery a {
+                margin: 10px;
+                flex: 1 0 300px;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            .gallery img {
+                max-width: 100%;
+                height: auto;
+                text-decoration: none;
+            }
+
+            .gallery figcaption {
+                margin-top: 5px;
+                font-size: 18px;
+                color: black;
+                font-family: 'Nord-Star Deco';
+                text-decoration: none;
+            }
+
+        .labeled-divider-section .label {
+            display: inline;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            max-width: calc(100% - 30px);
+            padding: 1px 15px 2px;
+            overflow: hidden;
+            transform: translateX(-50%) translateY(-50%);
+            background: var(--color-bg);
+            color: var(--color-text-muted);
+            font-size: 12px;
+            letter-spacing: .15em;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .enlarged-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .enlarged-image img {
+                max-width: 90%;
+                max-height: 90%;
+            }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .modal img {
+                max-height: 90%;
+                max-width: 90%;
+                object-fit: contain;
+            }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .gallery {
+            flex: 1 1 50%; /* Регулируйте этот параметр, чтобы изменять ширину контейнера с изображением */
+            margin-bottom: 20px;
+        }
+
+            .gallery img {
+                width: 100%;
+                height: 500px; /* Регулируйте этот параметр, чтобы изменять высоту изображений */
+                object-fit: cover;
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка страницы -->
+    <header>
+        <h1>Главная страница</h1>
+        <img src="img/эмблема2.png" alt="Картинка в шапке страницы" />
+        <button class="burger-menu-btn">&#9776;</button>
+    </header>
+
+    <!-- Ссылки меню -->
+    <nav>
+        <a href="Index.html">ГЛАВНАЯ</a>
+        <a href="Portfolio.html">ПОРТФОЛИО</a>
+        <a href="Uslugi.html">УСЛУГИ</a>
+        <a href="Kontact.html">КОНТАКТЫ</a>
+    </nav>
+    <!-- Блок галереи -->
+        <div class="gallery">
+            <a href="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/1.jpg" class="modal-link">
+                <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/1.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+                <figcaption>СМОТРЕТЬ</figcaption>
+            </a>
+            <a href="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/3.jpg" class="modal-link">
+                <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/3.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+                <figcaption>СМОТРЕТЬ</figcaption>
+            </a>
+            <a href="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/6.jpg" class="modal-link">
+                <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/6.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+                <figcaption>СМОТРЕТЬ</figcaption>
+            </a>
+            <a href="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/9.jpg" class="modal-link">
+                <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/9.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+                <figcaption>СМОТРЕТЬ</figcaption>
+            </a>
+            <a href="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/12.jpg" class="modal-link">
+                <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/12.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+                <figcaption>СМОТРЕТЬ</figcaption>
+            </a>
+            <a href="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/14.jpg" class="modal-link">
+                <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/1.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+                <figcaption>СМОТРЕТЬ</figcaption>
+            </a>
+            <a href="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/23.jpg" class="modal-link">
+                <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/23.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+                <figcaption>СМОТРЕТЬ</figcaption>
+            </a>
+            <a href="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/10.jpg" class="modal-link">
+                <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/10.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+                <figcaption>СМОТРЕТЬ</figcaption>
+            </a>
+
+        </div>
+        <h1 class="label">ГАЛЕРЕЯ</h1>
+
+        <!-- Блок галереи -->
+        <div class="gallery">
+            <a href="ВЕШАЛКИ ФОНАРИ ПАНО.html">
+                <img src="gallery/ВЕШАЛКИ ФОНАРИ ПАНО/16.jpg" alt="ВЕШАЛКИ ФОНАРИ ПАНО">
+                <figcaption>ВЕШАЛКИ ФОНАРИ ПАНО</figcaption>
+            </a>
+            <a href="ВОРОТА КАЛИТКИ ДВЕРИ.html">
+                <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/3.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+                <figcaption>ВОРОТА КАЛИТКИ ДВЕРИ</figcaption>
+            </a>
+            <a href="КОЗЫРЬКИ НАВЕСЫ.html">
+                <img src="gallery/КОЗЫРЬКИ НАВЕСЫ/2.jpg" alt="КОЗЫРЬКИ НАВЕСЫ">
+                <figcaption>КОЗЫРЬКИ НАВЕСЫ</figcaption>
+            </a>
+            <a href="МАНГАЛЫ ПОДСТАВКИ.html">
+                <img src="gallery/МАНГАЛЫ ПОДСТАВКИ/11.jpg" alt="МАНГАЛЫ ПОДСТАВКИ">
+                <figcaption>МАНГАЛЫ ПОДСТАВКИ</figcaption>
+            </a>
+            <a href="ПЕРИЛА ОГРАЖДЕНИЯ.html">
+                <img src="gallery/ПЕРИЛА ОГРАЖДЕНИЯ/7.jpg" alt="ПЕРИЛА ОГРАЖДЕНИЯ">
+                <figcaption>ПЕРИЛА ОГРАЖДЕНИЯ</figcaption>
+            </a>
+        </div>
+    </div>
+    <script>
+        // получаем ссылки на изображения
+        var links = document.querySelectorAll('.modal-link');
+
+        // обходим каждую ссылку
+        links.forEach(function (link) {
+            // добавляем обработчик события для клика на ссылке
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // отменяем переход по ссылке
+
+                // создаем модальное окно
+                var modal = document.createElement('div');
+                modal.classList.add('modal');
+
+                // создаем изображение
+                var img = document.createElement('img');
+                img.src = this.href;
+
+                // добавляем изображение в модальное окно
+                modal.appendChild(img);
+
+                // добавляем модальное окно в тело документа
+                document.body.appendChild(modal);
+
+                // добавляем обработчик события для клика на модальном окне
+                modal.addEventListener('click', function () {
+                    // удаляем модальное окно при клике на него
+                    modal.remove();
+                });
+            });
+        });
+
+        const galleryItem = document.querySelector('.gallery-item');
+        const image = document.querySelector('#image-1');
+
+        galleryItem.addEventListener('click', (e) => {
+            e.preventDefault(); // предотвращаем переход по ссылке
+
+            const enlargedImage = document.createElement('div');
+            enlargedImage.innerHTML = `<img src="${image.src}" alt="${image.alt}">`;
+            enlargedImage.classList.add('enlarged-image');
+            document.body.appendChild(enlargedImage);
+        });
+    </script>
+
+    <div class="parallax"></div>
+
+    <footer>
+        <p>Все права защищены ©NIKOLA</p>
+    </footer>
+</body>
+</html>

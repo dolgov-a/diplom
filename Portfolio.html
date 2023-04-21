@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="StyleSheet.css">
+    <script src="/JavaScript.js"></script>
+    <title>Главная страница</title>
+    <style>
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px auto;
+        }
+
+            .gallery a {
+                margin: 10px;
+                flex: 1 0 300px;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            .gallery img {
+                max-width: 100%;
+                height: auto;
+                text-decoration: none;
+            }
+
+            .gallery figcaption {
+                margin-top: 5px;
+                font-size: 18px;
+                color: black;
+                font-family: 'Nord-Star Deco';
+                text-decoration: none;
+            }
+    </style>
+</head>
+<body>
+    <!-- Шапка страницы -->
+    <header>
+        <h1>Главная страница</h1>
+        <img src="img/эмблема2.png" alt="Картинка в шапке страницы" />
+        <button class="burger-menu-btn">&#9776;</button>
+    </header>
+
+    <!-- Ссылки меню -->
+    <nav>
+        <a href="Index.html">ГЛАВНАЯ</a>
+        <a href="Portfolio.html">ПОРТФОЛИО</a>
+        <a href="Uslugi.html">УСЛУГИ</a>
+        <a href="Kontact.html">КОНТАКТЫ</a>
+    </nav>
+
+    <!-- Блок галереи -->
+    <div class="gallery">
+        <a href="ВЕШАЛКИ ФОНАРИ ПАНО.html">
+            <img src="gallery/ВЕШАЛКИ ФОНАРИ ПАНО/16.jpg" alt="ВЕШАЛКИ ФОНАРИ ПАНО">
+            <figcaption>ВЕШАЛКИ ФОНАРИ ПАНО</figcaption>
+        </a>
+        <a href="ВОРОТА КАЛИТКИ ДВЕРИ.html">
+            <img src="gallery/ВОРОТА КАЛИТКИ ДВЕРИ/3.jpg" alt="ВОРОТА КАЛИТКИ ДВЕРИ">
+            <figcaption>ВОРОТА КАЛИТКИ ДВЕРИ</figcaption>
+        </a>
+        <a href="КОЗЫРЬКИ НАВЕСЫ.html">
+            <img src="gallery/КОЗЫРЬКИ НАВЕСЫ/2.jpg" alt="КОЗЫРЬКИ НАВЕСЫ">
+            <figcaption>КОЗЫРЬКИ НАВЕСЫ</figcaption>
+        </a>
+        <a href="МАНГАЛЫ ПОДСТАВКИ.html">
+            <img src="gallery/МАНГАЛЫ ПОДСТАВКИ/11.jpg" alt="МАНГАЛЫ ПОДСТАВКИ">
+            <figcaption>МАНГАЛЫ ПОДСТАВКИ</figcaption>
+        </a>
+        <a href="ПЕРИЛА ОГРАЖДЕНИЯ.html">
+            <img src="gallery/ПЕРИЛА ОГРАЖДЕНИЯ/7.jpg" alt="ПЕРИЛА ОГРАЖДЕНИЯ">
+            <figcaption>ПЕРИЛА ОГРАЖДЕНИЯ</figcaption>
+        </a>
+    </div>
+
+    <div class="parallax"></div>
+
+    <footer>
+        <p>Все права защищены ©NIKOLA</p>
+    </footer>
+</body>
+</html>
